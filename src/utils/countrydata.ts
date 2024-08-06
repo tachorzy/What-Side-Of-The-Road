@@ -90,3 +90,19 @@ overwrite([
       name: 'Venezuela'
       }
 ]);
+
+export const filteredISOKeys = Object.keys(getCodeList()).filter(code => 
+            !nonCountries.includes(code)
+      )
+  
+export const isoCodesList = getNameList()
+  
+export const countries = getNames()
+  
+export const filteredCountryKeys = Object.keys(getNameList()).filter(country =>
+      !nonCountries.includes(getNameList()[country].toLowerCase())
+);
+  
+export const filteredCountries = countries.sort().filter(country =>
+      Object.values(filteredCountryKeys).includes(country.toLowerCase())
+)
