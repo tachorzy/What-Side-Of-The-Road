@@ -12,7 +12,11 @@ const items = Array.from({ length: 10 });
 
 <template>
       <div class="flex flex-col bg-black absolute right-0 top-0 w-2/5 h-screen mr-[12%]">
-            <img width="500" :class="['mt-96 absolute -rotate-90', isRightHand ? 'right-0 -mr-16' : 'left-0 -ml-16 ']" src="../assets/images/SUV.png"/>
+            <img 
+                  width="500" 
+                  :class="['mt-96 absolute -rotate-90', isRightHand ? 'right-0 -mr-16' : 'left-0 -ml-16 ']" 
+                  src="../assets/images/SUV.png"
+            />
             <div class="flex flex-col gap-y-12 py-4">
                   <div  v-for="item in items" class="self-center justify-center w-4 h-12 bg-yellow-300"></div>
             </div>
@@ -22,3 +26,4 @@ const items = Array.from({ length: 10 });
             Toggle Position
       </button>
 </template>
+
