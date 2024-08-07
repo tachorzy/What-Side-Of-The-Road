@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import Road from './components/Road.vue'
+import Combobox from './components/Combobox.vue'
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import Road from './components/Road.vue'
       </nav>
     </div>
   </header> -->
+  <Combobox/>
   <Road/>
   <RouterView />
 </template>
