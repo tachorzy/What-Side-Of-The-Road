@@ -27,10 +27,13 @@ watch(selectedCountry, (newCountry) => {
 </script>
 
 <template>
-  <main class="flex flex-col gap-y-8">
-    <h1 v-if="selectedCountry" class="text-gray-700 text-medium text-3xl">{{ selectedCountry }} drives on the {{ sideOfTheRoad }} hand side of the road.</h1>
-    <h1 v-else="selectedCountry" class="text-gray-700 text-medium text-3xl">Welcome.</h1>
-    <Combobox @country-selected="onCountrySelected" />
+  <main class="">
+    <div class="flex flex-col gap-y-8 lg:absolute lg:left-0 lg:top-0 lg:p-40 w-2/3">
+      <h1 v-if="selectedCountry" class="text-gray-700 text-medium text-3xl">{{ selectedCountry }} drives on the {{ sideOfTheRoad }} hand side of the road.</h1>
+      <h1 v-else class="text-gray-700 text-medium text-3xl">Welcome.</h1>
+      <Combobox @country-selected="onCountrySelected" />
+    </div>
+
     <Road :sideOfTheRoad="sideOfTheRoad"/>
   </main>
 </template>
