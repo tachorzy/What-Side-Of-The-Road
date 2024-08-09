@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
-const togglePosition = () => {
-  isRightHand.value = !isRightHand.value;
-};
+import { ref, watch } from 'vue';
+import { sideOfTheRoad as sharedSideOfTheRoad } from '@/state';
 
 const items = Array.from({ length: 10 });
 
-const sideOfTheRoad = ref<string>('INITIAL_STATE');
-console.log(sideOfTheRoad.value);
-const isRightHand = ref(sideOfTheRoad.value === 'right');
+console.log(`Side of the road in Road.vue is ${sharedSideOfTheRoad.value}`);
+const isRightHand = ref(sharedSideOfTheRoad.value === 'right');
+
+watch(sharedSideOfTheRoad, (newValue) => {
+  console.log(`Side of the road in Road.vue is ${newValue}`);
+  isRightHand.value = newValue === 'right';
+});
 </script>
 
 <template>

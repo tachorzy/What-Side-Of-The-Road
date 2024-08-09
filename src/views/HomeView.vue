@@ -4,9 +4,9 @@ import Combobox from '@/components/Combobox.vue';
 import Road from '@/components/Road.vue';
 import { isoCodesList } from '@/utils/countrydata';
 import { countryTraffic } from '@/utils/trafficdata';
+import { sideOfTheRoad } from '@/state';
 
 const selectedCountry = ref<string | null>(null);
-const sideOfTheRoad = ref<string | null>(null);
 
 const onCountrySelected = (event: Event) => {
   const target = event.target as HTMLInputElement;
@@ -16,13 +16,12 @@ const onCountrySelected = (event: Event) => {
 watch(selectedCountry, (newCountry) => {
   console.log('selectedCountry changed:', newCountry);
   if (newCountry) {
-    const isoCode = isoCodesList[newCountry];
+    const isoCode = isoCodesList[newCountry.toLowerCase()];
     console.log('ISO Code:', isoCode);
     sideOfTheRoad.value = countryTraffic[isoCode];
     console.log('sideOfTheRoad updated to:', sideOfTheRoad.value);
   } else {
-    sideOfTheRoad.value = null;
-    console.log('sideOfTheRoad reset to null');
+    sideOfTheRoad.value = '';
   }
 });
 </script>
