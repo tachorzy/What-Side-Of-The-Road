@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const isRightHand = ref(true);
-
 const togglePosition = () => {
   isRightHand.value = !isRightHand.value;
 };
 
 const items = Array.from({ length: 10 });
+
+const sideOfTheRoad = ref<string>('INITIAL_STATE');
+console.log(sideOfTheRoad.value);
+const isRightHand = ref(sideOfTheRoad.value === 'right');
 </script>
 
 <template>
@@ -21,9 +23,5 @@ const items = Array.from({ length: 10 });
                   <div  v-for="item in items" class="self-center justify-center w-4 h-12 bg-yellow-300"></div>
             </div>
       </div>
-
-      <button @click="togglePosition" class="absolute left-0  mx-16 bg-blue-500 text-white px-4 py-2 rounded">
-            Toggle Position
-      </button>
 </template>
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
       import { isoCodesList, filteredCountries } from '@/utils/countrydata';
-      import { ref, computed } from 'vue'
+      import { ref, computed, defineEmits } from 'vue'
       import {
             Combobox,
             ComboboxInput,
@@ -23,10 +23,18 @@
                   return country.toLowerCase().includes(query.value.toLowerCase())
                   })
       )
+
+      const emit = defineEmits(['countrySelected']);
+
+      function handleSelect(country: Country) {
+            selectedCountry.value = country;
+            emit('countrySelected', country);
+      }
+
 </script>
 
 <template>
-      <Combobox v-model="selectedCountry">
+      <Combobox v-model="selectedCountry" @change="handleSelect">
             <div class="relative mt-1 mr-24">
                   <div
                         class="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-lg"
