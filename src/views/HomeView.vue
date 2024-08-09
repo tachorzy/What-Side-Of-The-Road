@@ -27,7 +27,9 @@ watch(selectedCountry, (newCountry) => {
 </script>
 
 <template>
-  <main>
+  <main class="flex flex-col gap-y-8">
+    <h1 v-if="selectedCountry" class="text-gray-700 text-medium text-3xl">{{ selectedCountry }} drives on the {{ sideOfTheRoad }} hand side of the road.</h1>
+    <h1 v-else="selectedCountry" class="text-gray-700 text-medium text-3xl">Welcome.</h1>
     <Combobox @country-selected="onCountrySelected" />
     <Road :sideOfTheRoad="sideOfTheRoad"/>
   </main>

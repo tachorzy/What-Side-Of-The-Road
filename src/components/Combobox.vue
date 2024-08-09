@@ -28,6 +28,7 @@
 
       function handleSelect(country: Country) {
             selectedCountry.value = country;
+            query.value = country.name;
             emit('countrySelected', country);
       }
 
@@ -35,7 +36,7 @@
 
 <template>
       <Combobox v-model="selectedCountry" @change="handleSelect">
-            <div class="relative mt-1 mr-24">
+            <div class="relative mt-1">
                   <div
                         class="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-lg"
                   >
