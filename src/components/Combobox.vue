@@ -34,14 +34,15 @@
                         <ComboboxInput @change="query = $event.target.value" class="border-2 border-blue-900  p-2"/>
                   </div>
 
-                  <ComboboxOptions>
-                  <ComboboxOption
-                        v-for="country in queriedCountries"
-                        :key="country"
-                        :value="country"
-                  >
-                        {{ country }}
-                  </ComboboxOption>
+                  <ComboboxOptions class="max-h-96 w-full bg-neutral-100 overflow-y-scroll flex flex-col gap-y-2.5 rounded-2xl mt-2">
+                        <ComboboxOption
+                              v-for="country in queriedCountries"
+                              :key="country"
+                              :value="country"
+                              class="cursor-pointer hover:bg-blue-400 hover:text-white p-4 "
+                        >
+                              {{ country }}
+                        </ComboboxOption>
                   </ComboboxOptions>
             </div>
        </Combobox>
