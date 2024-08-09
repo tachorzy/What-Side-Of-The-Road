@@ -1,5 +1,5 @@
 <script setup lang="ts">
-      import { isoCodesList, filteredCountries } from '@/utils/countrydata';
+      import { filteredCountries } from '@/utils/countrydata';
       import { ref, computed, defineEmits } from 'vue'
       import {
             Combobox,
