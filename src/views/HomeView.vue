@@ -2,7 +2,6 @@
 import { computed, ref, watch } from 'vue';
 import Combobox from '@/components/Combobox.vue';
 import Road from '@/components/Road.vue';
-
 import { isoCodesList, filteredCountries } from '@/utils/countrydata';
 import { countryTraffic } from '@/utils/trafficdata';
 import { sideOfTheRoad } from '@/state';
@@ -14,13 +13,12 @@ const onCountrySelected = (event: Event) => {
   selectedCountry.value = target.value;
 };
 
+let isoCode = '';
+
 watch(selectedCountry, (newCountry) => {
-  console.log('selectedCountry changed:', newCountry);
   if (newCountry) {
-    const isoCode = isoCodesList[newCountry.toLowerCase()];
-    console.log('ISO Code:', isoCode);
+    isoCode = isoCodesList[newCountry.toLowerCase()];
     sideOfTheRoad.value = countryTraffic[isoCode];
-    console.log('sideOfTheRoad updated to:', sideOfTheRoad.value);
   } else {
     sideOfTheRoad.value = '';
   }
