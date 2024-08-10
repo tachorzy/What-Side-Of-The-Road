@@ -2,6 +2,7 @@
 import { computed, ref, watch } from 'vue';
 import Combobox from '@/components/Combobox.vue';
 import Road from '@/components/Road.vue';
+import ResultMessage from '@/components/ResultMessage.vue';
 import { isoCodesList, filteredCountries } from '@/utils/countrydata';
 import { countryTraffic } from '@/utils/trafficdata';
 import { sideOfTheRoad } from '@/state';
@@ -28,10 +29,7 @@ watch(selectedCountry, (newCountry) => {
 <template>
   <main>
     <div class="flex flex-col gap-y-8 lg:absolute lg:left-0 lg:top-0 lg:p-40 w-1/2">
-      <div class="flex flex-row gap-x-2 absolute md:relative mt-6 md:mt-4">
-        <h1 v-if="selectedCountry" class="text-neutral-100 font-medium text-xl xl:text-3xl">{{ selectedCountry }} drives on the <b class="text-[#dce603]">{{ sideOfTheRoad }}</b> hand side of the road.</h1>
-        <h1 v-else class="text-neutral-100 font-medium text-xl xl:text-3xl">Welcome.</h1>
-      </div>
+      <ResultMessage :selectedCountry="selectedCountry" :sideOfTheRoad="sideOfTheRoad" />
       <Combobox @country-selected="onCountrySelected" />
     </div>
 
