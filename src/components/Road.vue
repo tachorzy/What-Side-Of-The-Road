@@ -20,14 +20,14 @@ watch(sharedSideOfTheRoad, (newValue) => {
                   v-motion-slide-visible-once-bottom 
                   width="500" 
                   class="mt-96 absolute -rotate-90 right-0 -mr-16" 
-                  src="../assets/images/SUV.png"
+                  src="/images/SUV.png"
             />
             <img 
                   v-else:
                   v-motion-slide-visible-once-bottom 
                   width="500" 
                   class="mt-96 absolute -rotate-90 left-0 -ml-16" 
-                  src="../assets/images/SUV.png"
+                  src="/images/SUV.png"
             />
 
             <div class="flex flex-col gap-y-12 py-4">
