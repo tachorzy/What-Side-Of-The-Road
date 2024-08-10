@@ -37,13 +37,13 @@
 <template>
       <Combobox v-model="selectedCountry" @change="handleSelect"> 
             <div class="md:relative mt-24 xl:mt-1 absolute">
-                  <ComboboxInput @change="query = $event.target.value" class="w-full md:w-11/12 border-2 p-2 relative cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-[#dce603] sm:text-lg"/>
-                  <ComboboxOptions class="z-50 w-full md:w-11/12 max-h-96 font-medium bg-neutral-100 overflow-y-scroll flex flex-col gap-y-2.5 rounded-2xl mt-2">
+                  <ComboboxInput @change="query = $event.target.value" class="w-full md:w-11/12 border-2 border-neutral-600 p-2 relative cursor-default overflow-hidden rounded-lg bg-[#11110F] text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-700 focus-visible:ring-offset-2 focus-visible:ring-offset-[#dce603] sm:text-lg text-white "/>
+                  <ComboboxOptions class="z-50 w-full md:w-11/12 max-h-96 font-medium border-2 border-neutral-600 bg-[#11110F] overflow-y-scroll flex flex-col gap-y-2.5 rounded-2xl mt-4 text-white">
                         <ComboboxOption
                               v-for="country in queriedCountries"
                               :key="country"
                               :value="country"
-                              class="cursor-pointer font-medium hover:bg-[#dce603] p-4 "
+                              class="cursor-pointer font-medium hover:text-black hover:bg-[#dce603] p-4 "
                         >
                               {{ country }}
                         </ComboboxOption>
