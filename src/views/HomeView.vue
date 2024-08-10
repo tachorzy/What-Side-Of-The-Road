@@ -26,11 +26,11 @@ watch(selectedCountry, (newCountry) => {
 </script>
 
 <template>
-  <main class="">
+  <main>
     <div class="flex flex-col gap-y-8 lg:absolute lg:left-0 lg:top-0 lg:p-40 w-1/2">
-      <div class="flex flex-row gap-x-2">
-        <h1 v-if="selectedCountry" class="text-gray-700 font-medium text-3xl">{{ selectedCountry }} drives on the <b class="">{{ sideOfTheRoad }}</b> hand side of the road.</h1>
-        <h1 v-else class="text-gray-700 font-medium text-3xl">Welcome.</h1>
+      <div class="flex flex-row gap-x-2 absolute md:relative mt-4">
+        <h1 v-if="selectedCountry" class="text-neutral-100 font-medium text-xl xl:text-3xl">{{ selectedCountry }} drives on the <b class="text-[#dce603]">{{ sideOfTheRoad }}</b> hand side of the road.</h1>
+        <h1 v-else class="text-neutral-100 font-medium text-xl xl:text-3xl">Welcome.</h1>
       </div>
       <Combobox @country-selected="onCountrySelected" />
     </div>
