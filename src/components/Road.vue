@@ -14,17 +14,17 @@ watch(sharedSideOfTheRoad, (newValue) => {
 </script>
 
 <template>
-      <div class="flex flex-col bg-black absolute md:right-0 top-0 w-11/12 lg:w-2/5 h-screen mr-[12%]">
+      <div class="z-0 flex flex-col overflow-hidden bg-black md:absolute md:right-0 bottom-0 md:top-0 mt-20 md:mt-0 w-full h-1/4 lg:w-2/5 md:h-screen md:mr-[12%]">
             <img 
                   v-if="isRightHand"
                   v-motion-slide-visible-once-bottom 
-                  class="mt-80 absolute -rotate-90 right-0 mr-4 xl:mr-12 md:scale-100 w-32 xl:w-72" 
+                  class="mt-64 xl:mt-80 absolute -rotate-90 right-0 mr-12 md:scale-100 w-28 xl:w-72" 
                   src="/images/SUV.png"
             />
             <img 
                   v-else:
                   v-motion-slide-visible-once-bottom 
-                  class="mt-80 absolute -rotate-90 left-0 ml-4 xl:ml-12 w-32 xl:w-72" 
+                  class="mt-64 xl:mt-80 absolute -rotate-90 left-0 ml-12 w-28 xl:w-72" 
                   src="/images/SUV.png"
             />
 
