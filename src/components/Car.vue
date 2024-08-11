@@ -9,13 +9,8 @@ const props = defineProps({
 <template>
       <LeftHandDriveSUV 
             v-if="props.isRightHand" 
-            v-motion-slide-visible-once-bottom 
-            class="z-10 absolute right-0 mr-12 w-28 xl:w-72" 
       />
-
       <RightHandDriveSUV
-            v-else 
-            v-motion-slide-visible-once-bottom 
-            class="z-10 absolute left-0 ml-12 w-28 xl:w-72"
+            v-else
       />
 </template>
