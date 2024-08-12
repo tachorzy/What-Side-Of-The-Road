@@ -29,7 +29,7 @@ watch(selectedCountry, (newCountry) => {
 <template>
   <main>
     <div class="flex flex-col gap-y-8 lg:absolute lg:left-0 lg:top-0 lg:p-40 w-full md:w-1/2">
-      <ResultMessage :selectedCountry="selectedCountry" :sideOfTheRoad="sideOfTheRoad" />
+      <ResultMessage :isoCode="isoCode" :selectedCountry="selectedCountry" :sideOfTheRoad="sideOfTheRoad" />
       <Combobox @country-selected="onCountrySelected" />
     </div>
 
