@@ -37,7 +37,7 @@
 <template>
       <Combobox v-model="selectedCountry" @change="handleSelect"> 
             <div class="md:relative mt-24 xl:mt-1 absolute w-5/6 md:w-full">
-                  <ComboboxInput @change="query = $event.target.value" class="w-full md:w-11/12 border-2 border-neutral-600 p-2 relative cursor-default overflow-hidden rounded-lg bg-[#11110F] text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-700 focus-visible:ring-offset-2 focus-visible:ring-offset-[#dce603] sm:text-lg text-white "/>
+                  <ComboboxInput @change="query = $event.target.value" class="w-full md:w-11/12 border-2 border-neutral-600 p-2 relative cursor-text overflow-hidden rounded-lg bg-[#11110F] text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-700 focus-visible:ring-offset-2 focus-visible:ring-offset-[#dce603] sm:text-lg text-white "/>
                   <ComboboxOptions class="z-50 w-full md:w-11/12 max-h-60 md:max-h-96 font-medium border-2 border-neutral-600 bg-[#11110F] overflow-y-scroll flex flex-col gap-y-2.5 rounded-2xl mt-4 text-white">
                         <ComboboxOption
                               v-for="country in queriedCountries"
