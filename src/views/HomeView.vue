@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
-import Combobox from '@/components/Combobox.vue';
+import ComboBox from '@/components/ComboBox.vue';
 import Road from '@/components/Road.vue';
 import ResultMessage from '@/components/ResultMessage.vue';
 import { isoCodesList, filteredCountries } from '@/utils/countrydata';
@@ -30,7 +30,7 @@ watch(selectedCountry, (newCountry) => {
   <main>
     <div class="flex flex-col gap-y-8 lg:absolute lg:left-0 lg:top-0 lg:p-40 w-full md:w-1/2">
       <ResultMessage :isoCode="isoCode" :selectedCountry="selectedCountry" :sideOfTheRoad="sideOfTheRoad" />
-      <Combobox @country-selected="onCountrySelected" />
+      <ComboBox @country-selected="onCountrySelected" />
     </div>
 
     <Road :sideOfTheRoad="sideOfTheRoad"/>
