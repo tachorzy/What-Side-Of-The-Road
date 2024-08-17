@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import { ref, watch } from 'vue';
 import ComboBox from '@/components/ComboBox.vue';
 import Road from '@/components/RoadContainer.vue';
 import ResultMessage from '@/components/ResultMessage.vue';
-import { isoCodesList, filteredCountries } from '@/utils/countrydata';
+import { isoCodesList } from '@/utils/countrydata';
 import { countryTraffic } from '@/utils/trafficdata';
 import { sideOfTheRoad } from '@/state';
 
