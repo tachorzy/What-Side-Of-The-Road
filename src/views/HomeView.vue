@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
 import ComboBox from '@/components/ComboBox.vue';
-import Road from '@/components/Road.vue';
+import Road from '@/components/RoadContainer.vue';
 import ResultMessage from '@/components/ResultMessage.vue';
 import { isoCodesList, filteredCountries } from '@/utils/countrydata';
 import { countryTraffic } from '@/utils/trafficdata';
