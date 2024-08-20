@@ -3,6 +3,7 @@ import { ref, watch } from 'vue';
 import ComboBoxItem from '@/components/ComboBoxItem.vue';
 import Road from '@/components/RoadContainer.vue';
 import ResultMessage from '@/components/ResultMessage.vue';
+import FooterItem from '@/components/FooterItem.vue';
 import { isoCodesList } from '@/utils/countrydata';
 import { countryTraffic } from '@/utils/trafficdata';
 import { sideOfTheRoad } from '@/state';
@@ -34,5 +35,6 @@ watch(selectedCountry, (newCountry) => {
     </div>
 
     <Road :sideOfTheRoad="sideOfTheRoad"/>
+    <FooterItem />
   </main>
 </template>
