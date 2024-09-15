@@ -17,7 +17,7 @@ Then("the search results should display nothing", () => {
 });
 
 When("the user types \"Canada\" into the search bar", () => { 
-    cy.get('[data-cy="searchbar"]').type("Canada");
+    cy.get('[data-cy="searchbar"]').type("Canada", { force: true });
 });
 
 Then("the search results should display \"Canada\"", () => {

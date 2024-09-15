@@ -42,16 +42,22 @@
                         class="w-full md:w-11/12 border-2 border-neutral-600 p-2 relative cursor-text overflow-hidden rounded-lg bg-[#11110F] text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-700 focus-visible:ring-offset-2 focus-visible:ring-offset-[#dce603] sm:text-lg text-white"
                         data-cy="searchbar"
                   />
-                  <ComboboxOptions class="z-50 w-full md:w-11/12 max-h-60 md:max-h-96 font-medium border-2 border-neutral-600 bg-[#11110F] overflow-y-scroll flex flex-col gap-y-2.5 rounded-2xl mt-4 text-white">
-                        <ComboboxOption
-                              v-for="country in queriedCountries"
-                              :key="country"
-                              :value="country"
-                              class="cursor-pointer font-medium hover:text-black hover:bg-[#dce603] p-4 "
-                        >
-                              {{ country }}
-                        </ComboboxOption>
-                  </ComboboxOptions>
+                        <ComboboxOptions class="z-50 w-full md:w-11/12 max-h-60 md:max-h-96 font-medium border-2 border-neutral-600 bg-[#11110F] overflow-y-scroll flex flex-col gap-y-2.5 rounded-2xl mt-4 text-white">
+                              <template v-if="queriedCountries.length === 0">
+                                    <div class="cursor-not-allowed font-medium p-4 ">No countries found.</div>
+                              </template>
+                              <template v-else>
+                                    <ComboboxOption
+                                          v-for="country in queriedCountries"
+                                          :key="country"
+                                          :value="country"
+                                          class="cursor-pointer font-medium hover:text-black hover:bg-[#dce603] p-4 "
+                                    >
+                                          <span v-if="queriedCountries.length === 0">"Country not found."</span>
+                                          {{ country }}
+                                    </ComboboxOption>
+                              </template>
+                        </ComboboxOptions>
             </div>
        </Combobox>
 </template>
