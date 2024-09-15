@@ -4,10 +4,10 @@ Feature: Search for a country
         When I visit WhichSideOfTheRoad
         Then I should see the search bar
 
-    # Scenario: User searches with an empty input
-    #     When I visit WhichSideOfTheRoad
-    #     When the user leaves the search bar empty
-    #     Then the search results should display "Welcome, please select a country below."
+    Scenario: User searches with an empty input
+        When I visit WhichSideOfTheRoad
+        When the user leaves the search bar empty
+        Then the search results should display nothing
 
     Scenario: User searches for an existing country
         When I visit WhichSideOfTheRoad
