@@ -7,7 +7,7 @@ import BrandLogo from '@/components/BrandLogo.vue';
             <div class="flex flex-col w-1/5">
                   <BrandLogo />
                   <p class="text-base leading-relaxed text-pretty text-white pt-1.5">
-                        A simple app to help you remember which side of the road to drive on when you travel.
+                        Unsure whether your travel destination drives on the left or the right? We got you covered. Search the traffic rules of 197+ countries.
                   </p>
             </div> 
             
