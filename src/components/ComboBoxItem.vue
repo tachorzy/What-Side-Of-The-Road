@@ -52,6 +52,7 @@
                                           :key="country"
                                           :value="country"
                                           class="cursor-pointer font-medium hover:text-black hover:bg-[#dce603] p-4 "
+                                          data-cy="option"
                                     >
                                           <span v-if="queriedCountries.length === 0">"Country not found."</span>
                                           {{ country }}

@@ -18,3 +18,8 @@ Feature: Search for a country
         When I visit WhichSideOfTheRoad
         When the user types "Atlantis" into the search bar
         Then the search results should display "No countries found"
+
+    Scenario: User searches for a country with a substring
+        When I visit WhichSideOfTheRoad
+        When the user types "Canad" into the search bar
+        Then the search results should display "Canada"
