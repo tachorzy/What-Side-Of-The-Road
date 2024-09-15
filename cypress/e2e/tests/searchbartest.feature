@@ -23,3 +23,8 @@ Feature: Search for a country
         When I visit WhichSideOfTheRoad
         When the user types "Canad" into the search bar
         Then the search results should display "Canada"
+
+    Scenario: User searches for a country with a different case
+        When I visit WhichSideOfTheRoad
+        When the user types "cAnAdA" into the search bar
+        Then the search results should display "Canada"

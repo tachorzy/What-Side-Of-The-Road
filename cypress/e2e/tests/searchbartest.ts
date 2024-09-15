@@ -35,3 +35,7 @@ Then("the search results should display \"No countries found\"", () => {
 When("the user types \"Canad\" into the search bar", () => { 
     cy.get('[data-cy="searchbar"]').type("Canad", { force: true });
 });
+
+When("the user types \"cAnAdA\" into the search bar", () => {
+    cy.get('[data-cy="searchbar"]').type("cAnAda", { force: true });
+});
