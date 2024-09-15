@@ -14,7 +14,7 @@ Feature: Search for a country
         When the user types "Canada" into the search bar
         Then the search results should display "Canada"
 
-    # Scenario: User searches for a non-existing country
-    #     When I visit WhichSideOfTheRoad
-    #     When the user types "Atlantis" into the search bar
-    #     Then the search results should display "No results found"
+    Scenario: User searches for a non-existing country
+        When I visit WhichSideOfTheRoad
+        When the user types "Atlantis" into the search bar
+        Then the search results should display "No countries found"

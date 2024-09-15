@@ -23,3 +23,11 @@ When("the user types \"Canada\" into the search bar", () => {
 Then("the search results should display \"Canada\"", () => {
     cy.get('[data-cy="searchbar"]').should("have.value", "Canada");
 });
+
+When("the user types \"Atlantis\" into the search bar", () => {
+    cy.get('[data-cy="searchbar"]').type("Atlantis", { force: true });
+});
+
+Then("the search results should display \"No countries found\"", () => { 
+    cy.get('[data-cy="options"]').should("have.text", "No countries found.");
+});

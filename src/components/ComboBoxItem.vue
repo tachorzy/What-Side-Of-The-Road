@@ -42,7 +42,7 @@
                         class="w-full md:w-11/12 border-2 border-neutral-600 p-2 relative cursor-text overflow-hidden rounded-lg bg-[#11110F] text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-700 focus-visible:ring-offset-2 focus-visible:ring-offset-[#dce603] sm:text-lg text-white"
                         data-cy="searchbar"
                   />
-                        <ComboboxOptions class="z-50 w-full md:w-11/12 max-h-60 md:max-h-96 font-medium border-2 border-neutral-600 bg-[#11110F] overflow-y-scroll flex flex-col gap-y-2.5 rounded-2xl mt-4 text-white">
+                        <ComboboxOptions class="z-50 w-full md:w-11/12 max-h-60 md:max-h-96 font-medium border-2 border-neutral-600 bg-[#11110F] overflow-y-scroll flex flex-col gap-y-2.5 rounded-2xl mt-4 text-white" data-cy="options">
                               <template v-if="queriedCountries.length === 0">
                                     <div class="cursor-not-allowed font-medium p-4 ">No countries found.</div>
                               </template>
