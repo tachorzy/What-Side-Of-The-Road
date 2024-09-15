@@ -8,9 +8,11 @@ const props = defineProps({
 
 <template>
       <LeftHandDriveSUV 
-            v-if="props.isRightHand" 
+            v-if="props.isRightHand"
+            data-cy="left-hand-suv"
       />
       <RightHandDriveSUV
             v-else
+            data-cy="right-hand-suv"
       />
 </template>
