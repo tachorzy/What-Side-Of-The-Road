@@ -6,11 +6,8 @@ export default defineConfig({
     e2e: {
       baseUrl: 'http://localhost:5173',
       supportFile: false,
-      specPattern: "**/*.feature",
-      async setupNodeEvents(
-        on,
-        config
-      ) {
+      specPattern: 'cypress/e2e/**/*.feature', // Ensure this path matches where your feature files are located
+      async setupNodeEvents(on, config) {
           // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
           await addCucumberPreprocessorPlugin(on, config);
     
@@ -24,5 +21,5 @@ export default defineConfig({
           // Make sure to return the config object as it might have been modified by the plugin.
           return config;  
         },
-    }
+    },
 });
