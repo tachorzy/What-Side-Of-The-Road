@@ -1,5 +1,9 @@
 Feature: Result message
 
+    Scenario: User sees the landing page
+        When I visit WhichSideOfTheRoad
+        Then the user should see "Welcome, please select a country below."
+
     Scenario: User searches for a country that drives on the right
         When I visit WhichSideOfTheRoad
         When the user types "United States" into the search bar

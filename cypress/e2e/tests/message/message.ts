@@ -4,6 +4,9 @@ When("I visit WhichSideOfTheRoad", () => {
     cy.visit("http://localhost:5173/");
 });
 
+Then("the user should see \"Welcome, please select a country below.\"", () => { 
+    cy.get('[data-cy="welcome-message"]').should("contain", "Welcome, please select a country below.");
+})
 When("the user types \"United States\" into the search bar", () => { 
     cy.get('[data-cy="searchbar"]').type("United States", { force: true }).type("{enter}{enter}", { force: true })
 });
