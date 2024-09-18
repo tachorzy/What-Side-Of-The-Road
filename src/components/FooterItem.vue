@@ -3,7 +3,7 @@ import BrandLogo from '@/components/BrandLogo.vue';
 </script>
 
 <template>
-      <div class="flex flex-row gap-x-12 pt-10 bg-[#0A0B06] border-t-2 border-neutral-700 absolute left-0 mt-[22.75rem] w-full h-72 p-16">
+      <div class="flex flex-row gap-x-24 pt-10 bg-[#0A0B06] border-t-2 border-neutral-700 absolute left-0 mt-[22.75rem] w-full h-72 p-16">
             <div class="flex flex-col w-1/5">
                   <BrandLogo />
                   <p class="text-base leading-relaxed text-pretty text-white pt-1.5">
