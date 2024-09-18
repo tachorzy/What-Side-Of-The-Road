@@ -31,7 +31,6 @@
             query.value = country.name;
             emit('countrySelected', country);
       }
-
 </script>
 
 <template>
